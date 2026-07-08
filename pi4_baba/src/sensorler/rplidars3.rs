@@ -23,7 +23,7 @@ pub async fn lidar_task(tx: mpsc::Sender<LidarVeri>)
         return;
     }
     let mut buf: [u8; 5] = [0u8; 5];
-    let mut addr = 0;
+    let mut bufid = 0;
     let mut anlik_tur: Vec<LidarNokta> = Vec::with_capacity(1500);
     loop {
         
