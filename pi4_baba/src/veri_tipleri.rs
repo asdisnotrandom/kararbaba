@@ -22,7 +22,6 @@ pub struct ImuVeri
 }
 pub struct GpsVeri
 {
-    pub zaman_ms: u64,
     pub algi_boyut: u8,
     pub uydu_sayi: u8,
     pub boylam: i32,
@@ -30,4 +29,17 @@ pub struct GpsVeri
     pub yukseklik_mm: i32,
     pub hiz: i32,
     pub yonelim: i32,
+    pub zaman_ms: u64,
+
+}
+pub struct LidarNokta
+{
+    aci: f32,
+    mesafe_mm: f32,
+    kalite: u8
+}
+pub struct LidarVeri
+{
+    pub noktalar: Vec<LidarVeri>,
+    pub zaman_ms: u64,
 }
