@@ -32,14 +32,15 @@ pub struct GpsVeri
     pub zaman_ms: u64,
 
 }
+#[derive(Clone,Debug)]
 pub struct LidarNokta
 {
-    aci: f32,
-    mesafe_mm: f32,
-    kalite: u8
+    pub aci: f32,
+    pub mesafe_mm: f32,
+    pub kalite: u8
 }
 pub struct LidarVeri
 {
-    pub noktalar: Vec<LidarVeri>,
+    pub noktalar: Vec<LidarNokta>,
     pub zaman_ms: u64,
 }
